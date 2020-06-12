@@ -1,0 +1,90 @@
+.info{
+    
+    background-color:#8d7a80;
+    height: 720px;
+    padding: 0px;
+    margin-left: -15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    overflow-x: auto;
+
+}
+
+.inforamtons{
+    
+    width:auto;
+    height: auto;
+    border-radius: 10px;
+
+
+    
+}
+
+
+
+
+.btn1 {
+    background-color: DodgerBlue;
+
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+
+  }
+  
+  /* Darker background on mouse-over */
+  .btn1:hover {
+    background-color: #FF7701;
+  }
+
+
+  button{
+    
+    width: 183px;
+    height: 45px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 15px 0 rgba(0, 0, 0, 0.19);
+    margin: 3px;
+
+
+}
+
+
+
+
+
+.header{
+
+    background-color:floralwhite;
+}
+
+
+
+.titel{
+    margin-bottom: 25px;
+}
+
+.help{
+    
+    position: absolute;
+    top: 650px;
+    left: 310px;
+}
+
+
+.info2{
+    background-color:#8d7a80;
+    height: 720px;
+    padding: 0px;
+    margin-right: -15px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 15px 0 rgba(0, 0, 0, 0.19);
+    padding-left: 17px;
+    
+   
+}
+
+.RightSide{
+
+    background-color:teal;
+ 
+}
+
+

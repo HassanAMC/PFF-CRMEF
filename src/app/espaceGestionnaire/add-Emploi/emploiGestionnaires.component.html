@@ -1,0 +1,99 @@
+<section class="header">
+
+  <div class="container-fluid text-centre">
+
+    <div class="row">
+
+      <div class="col-md-2 text-center">
+        <div class="info">
+          <div class="image1">
+            <img src="assets/images/P.png" width="80px" height="auto" style="padding-top: 10px;">
+            <h4 style="margin-top: 10px"> Bienvenue, <br> </h4>
+          </div>
+          <button routerLink="/gestionnaire/dashboard" class="btn btn-dark " style=" margin-top: 30px;"> <i class="fas fa-tachometer-alt" ></i>  &nbsp;  tableau de bord</button>
+          <button routerLink="/gestionnaire/ajoute/stagiaire" class="btn btn-dark " ><i class="fa fa-address-card"></i> &nbsp; Ajouter stagiaire</button>
+          <button routerLink="/gestionnaire/ajoute/formateur" class="btn btn-dark " ><i class="fa fa-address-card"></i>&nbsp;Ajouter Formateur</button>
+          <button routerLink="/gestionnaire/notes/stagiaire" class="btn btn-dark "><i class="fa fa-plus" aria-hidden="true"></i>   &nbsp; &nbsp;     Ajouter Notes</button>
+          <button routerLink="/gestionnaire/liste/stagiaire" class="btn btn-dark "><i class="fa fa-list-ul" ></i>  &nbsp;&nbsp;&nbsp;&nbsp;   Liste stagiaires</button>
+          <button routerLink="/gestionnaire/liste/formateur" class="btn btn-dark "><i class="fa fa-list-ul" ></i> &nbsp; Liste Formateurs</button>
+          <button routerLink="/gestionnaire/liste/Reclamtions" class="btn btn-dark "><i class="fa fa-list-ul" ></i>&nbsp;Liste Reclamations</button>
+          <button routerLink="/gestionnaire/resultats/stagiaires" class="btn btn-dark "><i class="fa fa-list-ul" style="padding-right: 25px;" ></i>&nbsp;Liste Résultats</button>
+          <button routerLink="/gestionnaire/emploi/stagiaire" class="btn btn-dark "><i class="fa fa-calendar"></i> &nbsp;  Emploi du temps</button>
+        </div>
+
+      </div>
+
+    
+      <div class="col-md-8 my-4">
+     
+        <div class="inforamtons">
+          <h3><i class='far fa-calendar-alt' style='font-size:36px'></i>&nbsp; Emploi du temps</h3>
+          <hr />
+
+        <form >
+
+
+
+          <div class="form-groupe">
+            <label for="addSemetre">Semestre</label>
+            <select required #semestre="ngModel" [class.is-invalid]="semestre.invalid && semestre.touched" class="form-control" id="semestre" [(ngModel)]="timeTable.semestre" name="semestre" >
+                <option *ngFor="let sem of addSemestres" [value]="sem.name">{{sem.name}}</option>
+            </select>
+          </div>
+       
+          <div class="form-groupe">
+            <label for="addFiliere">Filiere</label>
+            <select required #filiere="ngModel" [class.is-invalid]="filiere.invalid && filiere.touched" class="form-control" id="filiere" [(ngModel)]="timeTable.filiere" name="filiere">
+              <option *ngFor="let fil of addFilieres" [value]="fil.id">{{fil.name}}</option>
+            <small>please enter a valid</small>
+            </select>
+          </div>
+
+          <div class="form-groupe">
+                <label for="addGroupe">Groupe</label>
+                <select required #groupe="ngModel" [class.is-invalid]="groupe.invalid && groupe.touched" class="form-control" id="groupe" [(ngModel)]="timeTable.groupe" name="groupe" >
+                    <option *ngFor="let gr of addGroupes" [value]="gr.id">{{gr.name}}</option>
+                </select>
+          </div><br>
+                
+          <div class="container row">
+            <div class="col-md-6">
+               <input type="file" (change)="onFileChanged($event)">
+          
+            </div>
+            <div class="col-md-6">
+                 <!-- <input type="button" (click)="onUpload()" value="upload"-->
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-warning"(ng-click)="onSubmit()"><i class="fa fa-plus" aria-hidden="true"></i>   &nbsp;Ajouter</button>
+          <button type="reset" class="btn btn-danger"><i class="fa fa-remove" aria-hidden="true"></i>   &nbsp;Annuler</button>
+      
+          <hr />
+        </form>
+          <div class="container row">
+            <div class="col-md-12">
+              <div *ngIf=message>{{message}}</div>             
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-2 text-center">
+        <div class="info2">
+          <div class="modal-body">
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+</section>

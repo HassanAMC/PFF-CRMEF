@@ -1,0 +1,112 @@
+<section class="header">
+
+  <div class="container-fluid text-centre">
+
+    <div class="row">
+
+      <div class="col-md-2 text-center">
+        <div class="info">
+          <div class="image1">
+            <img src="assets/images/P.png" width="120" height="auto" style="padding-top: 10px;">
+            <h4 style="margin-top: 10px"> Bienvenue, <br> </h4>
+          </div>
+
+          <button routerLink="/stagiaire" class="btn btn-light " style=" margin-top: 30px;"><i class="fa fa-address-card"></i> &nbsp;Profil Pesrsonnel</button>
+          <button routerLink="/stagiaire/emploi"  class="btn btn-light "><i class="fa fa-calendar"></i>&nbsp;Emploi du temps</button>
+          <button  routerLink="/stagiaire/resultats" class="btn btn-light "> <i class="fas fa-file-alt"></i> &nbsp;Résultats</button>
+          <button  class="btn btn-light "><i class="fas fa-archive"></i>&nbsp;&nbsp;&nbsp;&nbsp; Documaents</button>
+
+        </div>
+
+      </div>
+
+      <div class="col-md-8 my-4">
+
+        <div class="inforamtons">
+          <h3><i class="fas fa-file-alt" style='font-size:36px'></i>&nbsp; Résultats</h3>
+          <hr />
+
+
+          <table class="table table-bordered">
+
+            <tbody *ngIf="note">
+              <tr>
+                <td> <label><b>Stagiaire : </b></label> </td>
+                <td>{{note.nom_stagiaire}}</td>
+              </tr>
+
+              <tr>
+                <td> <label><b>Filière : </b></label> </td>
+                <td>{{note.filier_}}</td>
+              </tr>
+
+              <tr>
+                <td> <label><b>Module 1 : </b></label> </td>
+                <td>{{note.module_1}}</td>
+              </tr>
+
+
+              <tr>
+                <td> <label><b>Module 2 : </b></label> </td>
+                <td>{{note.module_2}}</td>
+              </tr>
+
+
+              <tr>
+                <td> <label><b>Module 3 : </b></label> </td>
+                <td>{{note.module_3}}</td>
+              </tr>
+              <tr>
+                <td> <label><b>Module 4 : </b></label> </td>
+                <td>{{note.module_4}}</td>
+              </tr>
+              <tr>
+                <td> <label><b>Module 5 : </b></label> </td>
+                <td>{{note.module_5}}</td>
+              </tr>
+              <tr>
+                <td> <label><b>Module 6 : </b></label> </td>
+                <td>{{note.module_6}}</td>
+              </tr>
+              <tr>
+                <td> <label><b>Module 7 : </b></label> </td>
+                <td>{{note.module_7}}</td>
+              </tr>
+              <tr>
+                <td> <label><b>Module 8 : </b></label> </td>
+                <td>{{note.module_8}}</td>
+              </tr>
+
+
+            </tbody>
+
+
+          </table>
+
+        </div>
+
+
+      </div>
+
+      <div class="col-md-2 text-center">
+        <div class="info2">
+          <div class="modal-body">
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+
+
+
+    </div>
+
+  </div>
+
+
+</section>

@@ -1,0 +1,52 @@
+<div class="container-fluid">
+    <div class="row no-gutter">
+        <!-- The image half -->
+        <div class="col-md-6 d-none d-md-flex bg-image">
+
+            <img src="assets/images/PA.jpg" alt="" height="680px" style="margin-left: -15px; margin-right: -15px;">
+
+
+        </div>
+
+
+        <!-- The content half -->
+        <div class="col-md-6 bg-light">
+            <div class="login d-flex align-items-center py-5">
+
+                <!-- Demo content-->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-10 col-xl-7 mx-auto">
+
+                            <img src="assets/images/computer.png" alt="user" style="width: 150px; height: 150px; margin-left: 120px; ">
+                            <h3 style="font-family: Cambria,Georgia,serif; " >Espace Stagiaire</h3>
+
+                            <form>
+                                <div class="form-group mb-3">
+                                    <input id="inputEmail"  #stgEmail type="email" placeholder="Adresse e-mail" required="" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4">
+                                </div>
+                                <div class="form-group mb-3">
+                                    <input id="inputPassword" #stgPassword type="password" placeholder="Mot de passe" required="" class="form-control rounded-pill border-0 shadow-sm px-4 text-primary">
+                                </div>
+                                <div class="form-group">
+                                  <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customControlInline">
+                                    <label class="custom-control-label" for="customControlInline">Remember me</label>
+                                  </div>
+                                </div>
+
+                                <button type="submit" (click)="authService.SignIn_S(stgEmail.value, stgPassword.value)" class="btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm">se connecter</button>
+
+                                <div class="d-flex justify-content-center links">
+                                  <a href="#">Mot de passe oublié?</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div><!-- End -->
+
+            </div>
+        </div><!-- End -->
+
+    </div>
+</div>

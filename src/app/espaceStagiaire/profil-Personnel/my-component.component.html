@@ -1,0 +1,155 @@
+<section class="header">
+
+  <div class="container-fluid text-centre">
+
+    <div class="row">
+
+      <div class="col-md-2 text-center">
+        <div class="info">
+          <div class="image1" *ngIf="stagiaire">
+            <img src="assets/images/P.png" width="120" height="auto" style="padding-top: 10px;">
+            <h4 style="margin-top: 10px"> Bienvenue, <br> </h4>
+            <h6>{{stagiaire.nomPrenom}} </h6>
+          </div>
+
+
+          <button routerLink="/stagiaire" class="btn btn-light " style=" margin-top: 30px;"><i
+              class="fa fa-address-card"></i> &nbsp;Profil Pesrsonnel</button>
+          <button routerLink="/stagiaire/emploi" class="btn btn-light "><i class="fa fa-calendar"></i>&nbsp;Emploi du
+            temps</button>
+          <button routerLink="/stagiaire/resultats" class="btn btn-light "> <i class="fas fa-file-alt"></i>
+            &nbsp;Résultats</button>
+          <button class="btn btn-light "><i class="fas fa-archive"></i>&nbsp;&nbsp;&nbsp;&nbsp; Documaents</button>
+
+
+
+        </div>
+
+      </div>
+
+      <div class="col-md-8 my-4">
+
+        <div class="inforamtons">
+
+
+          <h3><i class='fas fa-user-graduate' style='font-size:36px'></i>&nbsp; Informations</h3>
+          <hr />
+          <table class="table table-bordered">
+
+            <tbody *ngIf="stagiaire">
+              <tr>
+                <td> <label><b>Code Apogé : </b></label> </td>
+                <td>{{stagiaire.codeApoge}}</td>
+              </tr>
+
+              <tr>
+                <td> <label><b>Nom Complet : </b></label> </td>
+                <td>{{stagiaire.nomPrenom}}</td>
+              </tr>
+
+              <tr>
+                <td> <label><b>CNE : </b></label> </td>
+                <td>{{stagiaire.cne}}</td>
+              </tr>
+
+
+              <tr>
+                <td> <label><b>CIN : </b></label> </td>
+                <td>{{stagiaire.cin}}</td>
+              </tr>
+
+
+              <tr>
+                <td> <label><b>Date Naissance : </b></label> </td>
+                <td>{{stagiaire.dateNais}}</td>
+              </tr>
+
+
+              <tr>
+                <td> <label><b>Lieu Naissance : </b></label> </td>
+                <td> {{stagiaire.lieuNais}} </td>
+              </tr>
+
+              <tr>
+                <td> <label><b>Adress : </b></label> </td>
+                <td>{{stagiaire.adresse}}</td>
+              </tr>
+
+              <tr>
+                <td> <label><b>Email : </b></label> </td>
+                <td>{{stagiaire.email}}</td>
+              </tr>
+
+            </tbody>
+
+
+          </table>
+          <button class="btn btn-info " (click)="open(content)"> <i class="fas fa-plus"></i> &nbsp;Reclamation</button>
+        </div>
+
+      </div>
+      <div class="col-md-2 text-center">
+        <div class="info2">
+          <div class="modal-body">
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <ng-template #content let-c="close" let-d="dismiss">
+        <div class="modal-header">
+          <h4 class="modal-title" id="modal-basic-title">Reclamation</h4>
+          <button type="button" style="width: 80px; background-color: brown;" class="close" (click)="d('Cross click')">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form (ngSubmit)="onSubmit()">
+
+            <div class="input-group">
+              <select class="custom-select" id="filiere" name="filiere"
+                aria-label="Example select with button addon" [(ngModel)]="reclamation.filierStg">
+                <option *ngFor="let f of filieres">
+                  {{f.name}}
+
+                </option>
+              </select>
+
+            </div><br>
+
+            <div class="input-group">
+              <select class="custom-select" id="inputGroupSelect04" name="etat"
+                aria-label="Example select with button addon" [(ngModel)]="reclamation.typeRec">
+                <option *ngFor="let o of options">
+                  {{o.name}}
+
+                </option>
+              </select>
+
+            </div>
+            <div class="form-group">
+              <label for="message-text" class="col-form-label">Description:</label>
+              <textarea class="form-control" name="description" id="message-text" rows="7"
+                [(ngModel)]="reclamation.description"></textarea>
+            </div>
+
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-outline-dark"><i class="fa fa-plus" aria-hidden="true"></i>
+                &nbsp;Ajouter</button>
+            </div>
+
+          </form>
+        </div>
+
+      </ng-template>
+
+    </div>
+
+
+  </div>
+
+
+</section>

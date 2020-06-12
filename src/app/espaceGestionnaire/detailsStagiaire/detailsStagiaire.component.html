@@ -1,0 +1,129 @@
+<section class="header">
+
+  <div class="container-fluid text-centre">
+
+    <div class="row">
+
+      <div class="col-md-2 text-center">
+        <div class="info">
+          <div class="image1">
+            <img src="assets/images/P.png" width="80px" height="auto" style="padding-top: 10px;">
+            <h4 style="margin-top: 10px"> Bienvenue, <br> </h4>
+          </div>
+          <button routerLink="/gestionnaire/dashboard" class="btn btn-dark " style=" margin-top: 30px;"> <i class="fas fa-tachometer-alt" ></i>  &nbsp;  tableau de bord</button>
+          <button routerLink="/gestionnaire/ajoute/stagiaire" class="btn btn-dark " ><i class="fa fa-address-card"></i> &nbsp; Ajouter stagiaire</button>
+          <button routerLink="/gestionnaire/ajoute/formateur" class="btn btn-dark " ><i class="fa fa-address-card"></i>&nbsp;Ajouter Formateur</button>
+          <button routerLink="/gestionnaire/notes/stagiaire" class="btn btn-dark "><i class="fa fa-plus" aria-hidden="true"></i>   &nbsp; &nbsp;     Ajouter Notes</button>
+          <button routerLink="/gestionnaire/liste/stagiaire" class="btn btn-dark "><i class="fa fa-list-ul" ></i>  &nbsp;&nbsp;&nbsp;&nbsp;   Liste stagiaires</button>
+          <button routerLink="/gestionnaire/liste/formateur" class="btn btn-dark "><i class="fa fa-list-ul" ></i> &nbsp; Liste Formateurs</button>
+          <button routerLink="/gestionnaire/liste/Reclamtions" class="btn btn-dark "><i class="fa fa-list-ul" ></i>&nbsp;Liste Reclamations</button>
+          <button routerLink="/gestionnaire/resultats/stagiaires" class="btn btn-dark "><i class="fa fa-list-ul" style="padding-right: 25px;" ></i>&nbsp;Liste Résultats</button>
+          <button routerLink="/gestionnaire/emploi/stagiaire" class="btn btn-dark "><i class="fa fa-calendar"></i> &nbsp;  Emploi du temps</button>
+
+        </div>
+
+      </div>
+
+      <div class="col-md-8 my-4">
+
+        <div class="inforamtons">
+
+
+
+          <h3> <i class='fas fa-user-graduate' style='font-size:36px'></i>&nbsp;Stagiaire Details</h3>
+          <hr />
+
+
+          <table class="table table-bordered">
+
+            <tbody *ngIf="stagiaire">
+              <tr>
+                <td> <label><b>Code Apogé </b></label> </td>
+                <td>{{stagiaire.codeApoge}}</td>
+              </tr>
+
+              <tr>
+                <td> <label><b>Nom Complet </b></label> </td>
+                <td>{{stagiaire.nomPrenom}}</td>
+              </tr>
+
+              <tr>
+                <td> <label><b>CNE </b></label> </td>
+                <td>{{stagiaire.cne}}</td>
+              </tr>
+
+
+              <tr>
+                <td> <label><b>CIN </b></label> </td>
+                <td>{{stagiaire.cin}}</td>
+              </tr>
+
+
+              <tr>
+                <td> <label><b>Date Naissance </b></label> </td>
+                <td>{{stagiaire.dateNais}} </td>
+              </tr>
+
+
+              <tr>
+                <td> <label><b>Lieu Naissance </b></label> </td>
+                <td>{{stagiaire.lieuNais}} </td>
+              </tr>
+
+              <tr>
+                <td> <label><b>Adress </b></label> </td>
+                <td>{{stagiaire.adresse}}</td>
+              </tr>
+
+
+              <tr>
+                <td> <label><b>Email </b></label> </td>
+                <td>{{stagiaire.email}}</td>
+              </tr>
+
+              <tr>
+                <td> <label><b>Filiere </b></label> </td>
+                <td>{{stagiaire.filiere}}</td>
+              </tr>
+
+
+              <tr>
+                <td> <label><b>Groupe </b></label> </td>
+                <td>{{stagiaire.groupe}}</td>
+              </tr>
+
+
+
+
+
+
+            </tbody>
+          </table>
+
+
+
+
+
+
+
+        </div>
+      </div>
+
+      <div class="col-md-2 text-center">
+        <div class="info2">
+          <div class="modal-body">
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+</section>

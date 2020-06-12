@@ -1,0 +1,71 @@
+<section class="header">
+
+  <div class="container-fluid text-centre">
+
+    <div class="row">
+
+      <div class="col-md-2 text-center">
+        <div class="info">
+          <div class="image1">
+            <img src="assets/images/P.png" width="120" height="auto" style="padding-top: 10px;">
+            <h4 style="margin-top: 10px"> Bienvenue, <br> </h4>
+          </div>
+
+
+          <button routerLink="/formateur" class="btn btn-dark " style=" margin-top: 30px;"><i class="fa fa-address-card"></i>&nbsp;Profil Personnel</button>
+          <button routerLink="/formateur/emploi" class="btn btn-dark "><i class="fa fa-calendar"></i>&nbsp;Emploi de temps</button><br>
+          <button routerLink="/formateur/notes" class="btn btn-dark "> <i class="fas fa-file-alt"></i>&nbsp;liste des résultats</button>
+          <button routerLink="/formateur/liste/stagiaires" class="btn btn-dark "><i class="fa fa-list-ul" ></i> &nbsp;&nbsp;      List stagiaires</button><br>
+        </div>
+
+      </div>
+
+      <div class="col-md-8 my-4">
+      
+        <div class="inforamtons">
+
+          <h3><i class="fas fa-file-alt"></i>
+            &nbsp;Liste des Notes</h3>
+          <hr />
+
+          <div class="form-group">
+            <select class="form-control" name="" id="">
+              <option selected> Filière...</option>
+              <option>English</option>
+              <option>physique</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <select class="form-control" name="" id="">
+              <option selected>Groupe...</option>
+              <option>G1</option>
+              <option>G2</option>
+            </select>
+          </div>
+          <div class="imprimer">
+            <button  class="btn btn-info"(click)="openPDF()" ><i class="fas fa-book-reader" style="font-size: 25px;" ></i>&nbsp; Ouvrir PDF</button>
+            <button  class="btn btn-info"(click)="downloadPDF()" ><i class="fas fa-print"style="font-size: 25px;" ></i>&nbsp; Imprimer PDF</button>
+
+          </div>
+        </div>
+
+
+      </div>
+
+      <div class="col-md-2 text-center">
+        <div class="info2">
+          <div class="modal-body">
+
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+
+</section>

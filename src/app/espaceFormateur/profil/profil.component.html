@@ -1,0 +1,108 @@
+<section class="header">
+
+  <div class="container-fluid text-centre">
+
+    <div class="row">
+
+      <div class="col-md-2 text-center img-fluid">
+        <div class="info">
+          <div class="image1" >
+            <img src="assets/images/P.png" width="120" height="auto" style="padding-top: 10px;">
+            <h4 style="margin-top: 10px"  > Bienvenue, <br> </h4>
+          </div>
+
+          <button routerLink="/formateur" class="btn btn-dark " style=" margin-top: 30px;"><i class="fa fa-address-card"></i>&nbsp;Profil Personnel</button>
+          <button routerLink="/formateur/emploi" class="btn btn-dark "><i class="fa fa-calendar"></i>&nbsp;Emploi de temps</button><br>
+          <button routerLink="/formateur/notes" class="btn btn-dark "> <i class="fas fa-file-alt"></i>&nbsp;liste des résultats</button>
+          <button routerLink="/formateur/liste/stagiaires" class="btn btn-dark "><i class="fa fa-list-ul" ></i> &nbsp;&nbsp;      List stagiaires</button><br>
+
+        </div>
+
+      </div>
+
+      <div class="col-md-8 my-4 ">
+        <div class="inforamtons">
+
+          <h3><i class='fas fa-user-graduate' style='font-size:36px'></i>&nbsp; Informations</h3>
+          <hr />
+
+          <table class="table table-bordered">
+
+            <tbody *ngIf="formateur" >
+              <tr>
+                <td> <label><b>N° : </b></label> </td>
+                <td>{{formateur.numT}}</td>
+              </tr>
+
+              <tr>
+                <td> <label><b>Nom : </b></label> </td>
+                <td>{{formateur.nom}}</td>
+              </tr>
+
+
+              <tr>
+                <td> <label><b>CIN : </b></label> </td>
+                <td>{{formateur.cin}}</td>
+              </tr>
+
+              <tr>
+                <td> <label><b>branche : </b></label> </td>
+                <td>{{formateur.branche}}</td>
+              </tr>
+
+
+
+              <tr>
+                <td> <label><b>Date Naissance : </b></label> </td>
+                <td>{{formateur.dateNais}}</td>
+              </tr>
+
+
+              <tr>
+                <td> <label><b>Lieu Naissance : </b></label> </td>
+                <td>{{formateur.lieuNais}} </td>
+              </tr>
+
+              <tr>
+                <td> <label><b>Adress : </b></label> </td>
+                <td>{{formateur.adresse}}</td>
+              </tr>
+
+
+              <tr>
+                <td> <label><b>Email : </b></label> </td>
+                <td>{{formateur.email}}</td>
+              </tr>
+
+
+
+
+
+            </tbody>
+          </table>
+
+        </div>
+
+      </div>
+
+      <div class="col-md-2 text-center">
+        <div class="info2">
+          <div class="modal-body">
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+
+
+    </div>
+
+  </div>
+
+
+</section>

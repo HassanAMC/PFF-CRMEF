@@ -1,0 +1,113 @@
+<section class="header">
+
+  <div class="container-fluid text-centre">
+
+    <div class="row">
+
+      <div class="col-md-2 text-center">
+        <div class="info">
+          <div class="image1">
+            <img src="assets/images/P.png" width="80px" height="auto" style="padding-top: 10px;">
+            <h4 style="margin-top: 10px"> Bienvenue, <br> </h4>
+          </div>
+          <button routerLink="/gestionnaire/dashboard" class="btn btn-dark " style=" margin-top: 30px;"> <i class="fas fa-tachometer-alt" ></i>  &nbsp;  tableau de bord</button>
+          <button routerLink="/gestionnaire/ajoute/stagiaire" class="btn btn-dark " ><i class="fa fa-address-card"></i> &nbsp; Ajouter stagiaire</button>
+          <button routerLink="/gestionnaire/ajoute/formateur" class="btn btn-dark " ><i class="fa fa-address-card"></i>&nbsp;Ajouter Formateur</button>
+          <button routerLink="/gestionnaire/notes/stagiaire" class="btn btn-dark "><i class="fa fa-plus" aria-hidden="true"></i>   &nbsp; &nbsp;     Ajouter Notes</button>
+          <button routerLink="/gestionnaire/liste/stagiaire" class="btn btn-dark "><i class="fa fa-list-ul" ></i>  &nbsp;&nbsp;&nbsp;&nbsp;   Liste stagiaires</button>
+          <button routerLink="/gestionnaire/liste/formateur" class="btn btn-dark "><i class="fa fa-list-ul" ></i> &nbsp; Liste Formateurs</button>
+          <button routerLink="/gestionnaire/liste/Reclamtions" class="btn btn-dark "><i class="fa fa-list-ul" ></i>&nbsp;Liste Reclamations</button>
+          <button routerLink="/gestionnaire/resultats/stagiaires" class="btn btn-dark "><i class="fa fa-list-ul" style="padding-right: 25px;" ></i>&nbsp;Liste Résultats</button>
+          <button routerLink="/gestionnaire/emploi/stagiaire" class="btn btn-dark "><i class="fa fa-calendar"></i> &nbsp;  Emploi du temps</button>
+     
+
+        </div>
+
+      </div>
+
+      <div class="col-md-8 my-4">
+
+        <div class="inforamtons">
+          <h3><i class='fas fa-chalkboard-teacher' style='font-size:36px'></i>&nbsp;Ajouter Formateur</h3>
+          <hr />
+
+
+      
+            <form (ngSubmit)="onSubmit()"  #timeTableForm="ngForm">
+
+
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="N°" id="num" required
+                  [(ngModel)]="formateur.numT" name="num" >
+              </div>
+
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Nom Complet" id="nom_complet " required
+                  [(ngModel)]="formateur.nom" name="nom">
+              </div>
+
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="branche" id="branche" required [(ngModel)]="formateur.branche"
+                  name="branche">
+              </div>
+
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="CIN" id="cin" required [(ngModel)]="formateur.cin"
+                  name="cin">
+              </div>
+
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Adresse" id="adresse" required
+                  [(ngModel)]="formateur.adresse" name="adresse">
+              </div>
+
+        
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Lieu Naissance" id="lieuNai " required
+                  [(ngModel)]="formateur.lieuNais" name="lieuNai">
+              </div>
+
+
+              <div class="form-group">
+                <input type="date" class="form-control" placeholder="date Naissance" id="dateNai" required
+                  [(ngModel)]="formateur.dateNais" name="dateNai">
+              </div>
+
+
+
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Telephone Personnel" id="tel" required
+                  [(ngModel)]="formateur.tele" name="tel">
+              </div>
+
+              <div class="form-group">
+                <input type="email" class="form-control" placeholder="Email" id="email" required
+                  [(ngModel)]="formateur.email" name="email">
+              </div>
+
+              <button  [disabled]="timeTableForm.form.invalid" type="submit" class="btn btn-warning"><i class="fa fa-plus" aria-hidden="true"></i>   &nbsp;Ajouter</button>
+              <button type="reset" class="btn btn-danger"><i class="fa fa-remove" aria-hidden="true"></i>   &nbsp;Annuler</button>
+            </form>
+ 
+
+        </div>
+      </div>
+
+      <div class="col-md-2 text-center">
+        <div class="info2">
+          <div class="modal-body">
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+</section>
